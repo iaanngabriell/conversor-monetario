@@ -3,27 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moeda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Conversor de Moeda</title>
 </head>
 <body>
-   <div class="container d-flex justify-content-center align-items-center 100vh">
-    <div class="col-sm text-center main">
-        <h1 id="header-txt">CONVERSOR DE MOEDA</h1>
-
-        <div class="col cont">
-            <form>
-                <div class="col val">
-                    <label for="valor">VALOR</label><br>
-                    <input type="number"  id="valor" placeholder="Insira o valor...">
+    <div class="container vh-100 d-flex justify-content-center align-items-center box-green">
+        <div class="col-sm-8 col-md-6 col-lg-4">
+            <h1 class="text-center mb-4 header-txt">CONVERSOR DE MOEDA</h1>
+            <!-- Formulário único para todos os campos -->
+            <form class="cont" id="convertForm">
+                <div class="mb-3">
+                    <label for="valor" class="form-label">Valor</label>
+                    <input type="number" id="valor" class="form-control" placeholder="Insira o valor..." required>
+                </div>
+                <div class="mb-3">
+                    <label for="moedaOrigem" class="form-label">De</label>
+                    <select id="moedaOrigem" class="form-select">
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="JPY">Iene Japonês (JPY)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="CHF">Franco Suíço (CHF)</option>
+                        <option value="CNY">Yuan Chinês (CNY)</option>
+                        <option value="NZD">Dólar Neozelandês (NZD)</option>
+                        <option value="MXN">Peso Mexicano (MXN)</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="moedaDestino" class="form-label">Para</label>
+                    <select id="moedaDestino" class="form-select">
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="JPY">Iene Japonês (JPY)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                        <option value="CHF">Franco Suíço (CHF)</option>
+                        <option value="CNY">Yuan Chinês (CNY)</option>
+                        <option value="NZD">Dólar Neozelandês (NZD)</option>
+                        <option value="MXN">Peso Mexicano (MXN)</option>
+                    </select>
+                </div>
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary" onclick="convert()">Converter</button>
                 </div>
             </form>
+            <!-- Resultado abaixo do formulário -->
+            <div class="mt-4 text-center">
+                <h4 id="txt-result">Resultado</h4>
+                <div class="result"></div>
+            </div>
         </div>
-
     </div>
-   </div>
+
+    <footer class="fixed-bottom text-center cp">
+        &copy; Todos os direitos reservados por IGCSTECHNOLOGY
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
-<script src="js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-</html> 
+</html>

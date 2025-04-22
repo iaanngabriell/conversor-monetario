@@ -1,16 +1,15 @@
 body{
-    background-color: #f2f2f2;
+    background-color: #f2f2f2 !important;
 }
 
 
-.main{
+.box-green{
     background-color: #565940 !important;
     margin-top: 1em !important;
-    height: 700px !important;
     border-radius: 15px !important;
 }
 
-#header-txt{
+.header-txt{
     color: whitesmoke !important;
     font-weight: bold !important;
     padding: 1em !important;
@@ -20,14 +19,36 @@ body{
 .cont{
     background-color: #D9D7C5 !important;
     padding: 3em !important;
-    height: 500px !important;
     border-radius: 20px !important;
     margin-left: 1em !important;
     margin-right: 1em !important;
+}
+
+/* Resultado */
+.result{
+    background-color: #FFFFFF !important;
+    padding: 3em !important;
+    height: 150px !important;
+    border-radius: 10px !important;
+    color: black !important;
+}
+
+#txt-result{
+    text-align: left !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
 }
 
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* Footer */
+.cp{
+    background-color: #565940 !important;
+    padding: 0.5em !important;
+    text-align: center !important;
+    font-weight: bold !important;
 }
