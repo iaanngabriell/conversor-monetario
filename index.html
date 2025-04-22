@@ -9,16 +9,17 @@
 </head>
 <body>
     <div class="container vh-100 d-flex justify-content-center align-items-center box-green">
-        <div class="col-sm-8 col-md-6 col-lg-4">
+        <div class="col-sm-8 col-md-8 col-lg-10">
             <h1 class="text-center mb-4 header-txt">CONVERSOR DE MOEDA</h1>
-            <!-- Formulário único para todos os campos -->
+
+            <!-- Input e Select -->
             <form class="cont" id="convertForm">
                 <div class="mb-3">
-                    <label for="valor" class="form-label">Valor</label>
+                    <label for="valor" class="form-label fw-bold">VALOR</label>
                     <input type="number" id="valor" class="form-control" placeholder="Insira o valor..." required>
                 </div>
                 <div class="mb-3">
-                    <label for="moedaOrigem" class="form-label">De</label>
+                    <label for="moedaOrigem" class="form-label fw-bold">DE</label>
                     <select id="moedaOrigem" class="form-select">
                         <option value="BRL">Real (BRL)</option>
                         <option value="USD">Dólar Americano (USD)</option>
@@ -34,7 +35,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="moedaDestino" class="form-label">Para</label>
+                    <label for="moedaDestino" class="form-label fw-bold">PARA</label>
                     <select id="moedaDestino" class="form-select">
                         <option value="USD">Dólar Americano (USD)</option>
                         <option value="EUR">Euro (EUR)</option>
@@ -49,13 +50,14 @@
                         <option value="MXN">Peso Mexicano (MXN)</option>
                     </select>
                 </div>
-                <div class="d-grid">
-                    <button type="button" class="btn btn-primary" onclick="convert()">Converter</button>
+                <div class="d-grid d-flex justify-content-center">
+                    <button type="button" class="btn-convert fw-bold" onclick="convert()">CONVERTER <img src="img/troca.png" alt="Converter"></button>
                 </div>
             </form>
-            <!-- Resultado abaixo do formulário -->
+
+            <!-- Aba resultado -->
             <div class="mt-4 text-center">
-                <h4 id="txt-result">Resultado</h4>
+                <h4 class="text-center txt-result">RESULTADO</h4>
                 <div class="result"></div>
             </div>
         </div>

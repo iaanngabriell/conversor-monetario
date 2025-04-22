@@ -1,11 +1,11 @@
+// Busca valores digitado e as moedas de origem e destino
 async function convert() {
-    // Obtém o valor digitado e as moedas de origem e destino
     const valor = parseFloat(document.getElementById("valor").value);
     const moedaOrigem = document.getElementById("moedaOrigem").value;
     const moedaDestino = document.getElementById("moedaDestino").value;
     const API_KEY = "17e5330206f060e870f2cd8d0c98bfbf"
 
-    // Validação do valor
+    // Veririfacar Valor
     if (isNaN(valor) || valor <= 0) {
         document.querySelector(".result").innerHTML = `
             <p class="text-warning">⚠️ Por favor, insira um valor numérico maior que zero!</p>
